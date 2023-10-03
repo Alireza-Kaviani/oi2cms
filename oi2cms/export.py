@@ -41,7 +41,7 @@ def export_testcases(path, problem:Problem):
 def export_checker(path, problem:Problem):
     checker_path = os.path.join(path, "checker")
     os.mkdir(checker_path)
-    shutil.copyfile(os.path.expanduser("~/.oi2cms/default.cpp"),
+    shutil.copyfile(os.path.expanduser(problem.checker),
                      os.path.join(checker_path, "checker.cpp"))
     shutil.copyfile(os.path.expanduser("~/.oi2cms/testlib.h"),
                      os.path.join(checker_path, "testlib.h"))

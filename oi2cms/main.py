@@ -7,7 +7,7 @@ from oi2cms.export import export_cms
 app = typer.Typer()
 
 @app.command(name="coci-problem")
-def export_coci_problem(path:str):
+def export_coci_problem(path:str, checker:str = None):
     name = path.split("/")[-1]
     in_pattern = path + "/" + name + "\\.in\\.(?P<subtask>\\d+)(?P<test>\\w+)"
     out_pattern = path + "/" + name + "\\.out\\.(?P<subtask>\\d+)(?P<test>\\w+)"
@@ -17,6 +17,8 @@ def export_coci_problem(path:str):
     samples = find_specific_subtask(path, "0", in_pattern, out_pattern)
     all_testcases = testcases + samples
     problem = Problem(name, name, all_testcases)
+    if(checker != None):
+        problem.checker = checker
     export_cms(problem) #TODO: Add path
 
 

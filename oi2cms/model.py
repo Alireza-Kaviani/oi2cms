@@ -10,3 +10,4 @@ class Problem:
         self.code = code
         self.name = name
         self.testcases = testcases
+        self.checker = "~/.oi2cms/default.cpp"
