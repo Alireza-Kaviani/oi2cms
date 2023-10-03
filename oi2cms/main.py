@@ -7,7 +7,7 @@ from oi2cms.export import export_cms
 app = typer.Typer()
 
 @app.command(name="coci-problem")
-def export_coci_problem(path:str="."):
+def export_coci_problem(path:str):
     name = path.split("/")[-1]
     in_pattern = path + "/" + name + "\\.in\\.(?P<subtask>\\d+)(?P<test>\\w+)"
     out_pattern = path + "/" + name + "\\.out\\.(?P<subtask>\\d+)(?P<test>\\w+)"
