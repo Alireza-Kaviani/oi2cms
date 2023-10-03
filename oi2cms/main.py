@@ -2,6 +2,7 @@ import typer
 
 from oi2cms.utils import *
 from oi2cms.model import Problem
+from oi2cms.export import export_cms
 
 app = typer.Typer()
 
@@ -16,6 +17,7 @@ def export_coci_problem(path:str="."):
     samples = find_specific_subtask(path, "0", in_pattern, out_pattern)
     all_testcases = testcases + samples
     problem = Problem(name, name, all_testcases)
+    export_cms(problem) #TODO: Add path
 
 
 @app.command()
