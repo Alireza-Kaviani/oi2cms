@@ -26,7 +26,7 @@ def export_problem(path, problem:Problem):
     result["memory_limit"] = int(input("Enter memory limit (MB): ")) * 1024 * 1024
     result["score_precision"] = 2
     result["task_type"] = "Batch"
-    result["task_type_params"] = "{}"
+    result["task_type_params"] = json.dumps({"task_type_parameters_Batch_compilation":"alone"})
     with open(problem_path, "w") as outfile:
         json.dump(result, outfile)
 

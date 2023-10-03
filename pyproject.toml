@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "oi2cms"
-version = "0.1.1"
+version = "0.1.2"
 description = ""
 authors = ["Alireza Kaviani <alireza.kaviani.2005@gmail.com>"]
 readme = "README.md"
