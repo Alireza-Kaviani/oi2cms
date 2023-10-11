@@ -21,7 +21,6 @@ def export_coci_problem(path:str, checker:str = None):
         problem.checker = checker
     export_cms(problem) #TODO: Add path
 
-
 @app.command()
 def hello():
     print("Hello World!")

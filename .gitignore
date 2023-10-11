@@ -1,2 +1,3 @@
 tests/
-oi2cms/__pycache__/
+__pycache__
+/.env
