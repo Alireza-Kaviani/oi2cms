@@ -22,7 +22,7 @@ def export_coci_problem(path:str, checker:str = None):
     export_cms(problem) #TODO: Add path
 
 @app.command(name="usaco-problem")
-def export_coci_problem(path:str, checker:str = None):
+def export_usaco_problem(path:str, checker:str = None):
     name = path.split("/")[-1]
     all_testcases = []
     n_subtasks = int(input("Enter number of subtasks: "))
